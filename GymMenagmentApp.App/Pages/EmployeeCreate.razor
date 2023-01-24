@@ -1,0 +1,46 @@
+﻿@inject IStringLocalizer<Resource> localizer
+@page "/employeecreate"
+
+@if (!Saved)
+{
+    <section>
+        <h1 class="page-title marginBot30" style="margin-bottom:30px">@localizer["userCreatorMenu"]</h1>
+        <EditForm Model="@Employee" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-4 bold" style="font-weight:bold">@localizer["firstName"]</label>
+                <InputText id="firstName" name="firstName" class="form-control col-sm-8" @bind-Value="@Employee.FirstName" @oninput="@((e)=>{ Employee.FirstName = (string)e.Value;})" placeholder="@localizer["firstName"]"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="lastName" class="col-sm-4 bold" style="font-weight:bold">@localizer["lastName"]</label>
+                <InputText id="lastName" name="lastName" class="form-control col-sm-8" @bind-Value="@Employee.LastName" @oninput="@((e)=>{ Employee.LastName = (string)e.Value;})" placeholder="@localizer["lastName"]"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 bold" style="font-weight:bold">@localizer["email"]</label>
+                <InputText id="email" name="email" class="form-control col-sm-8" @bind-Value="@Employee.Email" @oninput="@((e)=>{ Employee.Email = (string)e.Value;})" placeholder="@localizer["email"]"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-sm-4 bold" style="font-weight:bold">@localizer["createPassword"]</label>
+                <InputText type="password" id="password" name="password" class="form-control col-sm-8" @bind-Value="@Employee.Password" @oninput="@((e)=>{ Employee.Password = (string)e.Value;})" placeholder="@localizer["password"]"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="phone" class="col-sm-4 bold" style="font-weight:bold">@localizer["phone"]</label>
+                <InputText id="phone" name="phone" class="form-control col-sm-8" @bind-Value="@Employee.Phone" @oninput="@((e)=>{ Employee.Phone = (string)e.Value;})" placeholder="@localizer["phone"]"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="levelOfSecurity" class="col-sm-4 bold" style="font-weight:bold">@localizer["levelOfSecurity"]</label>
+                <InputText id="levelOfSecurity" name="levelOfSecurity" class="form-control col-sm-8" @bind-Value="@LevelOfSecurity" @oninput="@((e)=>{ LevelOfSecurity = (string)e.Value;})" placeholder="@localizer["levelOfSecurity"]"></InputText>
+            </div>
+            <div class="form-group row">
+                <label for="picture" class="col-sm-4 bold" style="font-weight:bold">@localizer["picture"]</label>
+                <InputFile OnChange="@OnInputFileChange"></InputFile>
+                <img src="@ProfilePicDataUrl" style="width:256px; height:256px">
+            </div>
+            <button typle="submit" class="btn btn-primary">@localizer["btnCreateUser"]</button>
+            <a class="btn btn-outline-primary table-btn" @onclick="@NavigateToOverview">@localizer["back"]</a>
+        </EditForm>
+    </section>
+}
+else
+{
+    <div class="alert @StatusClass">@Msg</div>
+}

@@ -1,0 +1,153 @@
+﻿@inject IStringLocalizer<Resource> localizer
+@page "/reports"
+@inject IJSRuntime JSRuntime
+@using DataBase.API.Models
+@using DataBaseAPI.Models
+@using GymMenagmentApp.App.PDF
+@using GymMenagmentApp.App.Services
+@using GymMenagmentApp.Shared
+@using System.Text.Json
+@using System.Text
+@using System.Threading
+@inject NavigationManager NavManager
+@inject HttpClient _httpClient
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @*<button type="button" class="btn btn-success" @onclick="@(p=>DownloadFile("report.pdf"))">@localizer["downloadBtn"]</button>*@
+            @*<button type="button" class="btn btn-info" @onclick="@(p=>OpenToIFrame("iframeId"))">@localizer["viewBtn"]</button>*@
+            <button type="button" class="btn btn-warning" @onclick="@DownloadServerFilePdf">@localizer["downloadPdfBtn"]</button>
+            <button type="button" class="btn btn-warning" @onclick="@DownloadServerFile">@localizer["downloadRtfBtn"]</button>
+            @*<button type="button" class="btn btn-warning" @onclick="@DownloadAll">@localizer["downloadAllThreeFileTypes"]</button>*@
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>@localizer["id"]</th>
+                <th>@localizer["userId"]</th>
+                <th>@localizer["firstName"]</th>
+                <th>@localizer["lastName"]</th>
+                <th>@localizer["date"]</th>
+                <th>@localizer["amount"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in ReportDataList)
+            {
+                <tr>
+                    <td></td>
+                    <td>@user.Id</td>
+                    <td>@user.UserId</td>
+                    <td>@user.Name</td>
+                    <td>@user.LastName</td>
+                    <td>@user.Date</td>
+                    <td>@user.Amount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+        </div>
+    </div>
+</div>
+
+@code{
+
+
+    private void DownloadFile(string filename)
+    {
+        Console.WriteLine("halo");
+        var pdf = new PDFGenerator();
+        pdf.DownloadPdfAsync(JSRuntime, filename);
+    }
+    private void OpenToIFrame(string idiframe)
+    {
+        var pdf = new PDFGenerator();
+        pdf.ViewPdf(JSRuntime, idiframe);
+    }
+    private void OpenNewTab(string filename)
+    {
+        var pdf = new PDFGenerator();
+        pdf.ViewPdfNewTab(JSRuntime, filename);
+    }
+
+    public void table()
+    {
+        NavManager.NavigateTo("https://localhost:7267/DataBase/get-pdf");
+    }
+
+    //private async Task DownloadServerFile()
+    //{
+    //    var userJson = new StringContent(JsonSerializer.Serialize(ReportDataList), Encoding.UTF8, "application/json");
+
+    //    var response = await _httpClient.PostAsync("https://localhost:7019/WeatherForecast/create-rtf", userJson);
+
+    //    if (response.IsSuccessStatusCode)
+    //    {
+    //        var result = await JsonSerializer.DeserializeAsync<bool>(await response.Content.ReadAsStreamAsync());
+    //    }
+
+    //    var httpResponseMessage = await _httpClient.GetAsync("https://localhost:7019/WeatherForecast/get-rtf");
+    //    var base64String = httpResponseMessage.Content.ReadAsStringAsync().Result;
+
+    //    await JSRuntime.InvokeVoidAsync("downloadRtf", "application/rtf", base64String, "document.rtf");
+    //}
+
+    //private async Task DownloadServerFilePdf()
+    //{
+    //    var userJson = new StringContent(JsonSerializer.Serialize(ReportDataList), Encoding.UTF8, "application/json");
+
+    //    var response = await _httpClient.PostAsync("https://localhost:7019/WeatherForecast/create-pdf", userJson);
+
+    //    if (response.IsSuccessStatusCode)
+    //    {
+    //        var result = await JsonSerializer.DeserializeAsync<bool>(await response.Content.ReadAsStreamAsync());
+    //    }
+
+    //    var httpResponseMessage = await _httpClient.GetAsync("https://localhost:7019/WeatherForecast/get-pdf");
+    //    var base64String = httpResponseMessage.Content.ReadAsStringAsync().Result;
+
+    //    await JSRuntime.InvokeVoidAsync("downloadPdf", "application/pdf", base64String, "document.pdf");
+    //}
+    private async Task DownloadAll()
+    {
+        //Thread mainThread = Thread.CurrentThread;
+        //if(Thread.CurrentThread.Name == null)
+        //{
+        //    Thread.CurrentThread.Name = this.GetType().Name;
+        //}
+        //Console.WriteLine(mainThread.Name);
+
+        Thread thread1 = new Thread(CountDown);
+        Thread thread2 = new Thread(CountUp);
+        thread1.Start();
+        thread2.Start();
+        //CountDown();
+        //CountUp();
+
+    }
+    public static void CountDown()
+    {
+        for(int i=10; i>=0; i--)
+        {
+            Console.WriteLine("Timer #1 : " + i + " seconds");
+            Thread.Sleep(1000);
+        }
+        Console.WriteLine("Timer #1 is completed!");
+    }
+    public static void CountUp()
+    {
+        for(int i=0; i>=10; i++)
+        {
+            Console.WriteLine("Timer #2 : " + i + " seconds");
+            //Thread.Sleep(1000);
+        }
+        Console.WriteLine("Timer #2 is completed!");
+    }
+}

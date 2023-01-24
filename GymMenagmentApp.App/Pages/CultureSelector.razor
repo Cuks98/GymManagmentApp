@@ -1,0 +1,38 @@
+﻿@using System.Globalization
+@inject IStringLocalizer<Resource> localizer
+@inject ILocalStorageService localstorage
+@inject NavigationManager NavManager
+<p style="text-align:center; margin:0px; padding:7px; font-weight: bold">
+    @localizer["language"]:
+</p>
+<select class="form-control" @bind="Culture" style="width:300px;margin-left:10px">
+    @foreach (var culture in cultures)
+    {
+        <option value="@culture">@localizer[@culture.DisplayName]</option>
+    }
+</select>
+
+@code {
+    CultureInfo[] cultures = new[]
+    {
+        new CultureInfo("hr-HR"),
+        new CultureInfo("en-US"),
+        new CultureInfo("de-DE"),
+        new CultureInfo("it-IT"),
+        new CultureInfo("sl-SI")
+    };
+
+    CultureInfo Culture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                localstorage.SetItemAsync<string>("culture", value.Name);
+                NavManager.NavigateTo(NavManager.Uri, forceLoad: true);
+
+            }
+        }
+    }
+}

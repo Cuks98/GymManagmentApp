@@ -1,0 +1,89 @@
+﻿@inject ILocalStorageService localstorage
+@inject IStringLocalizer<Resource> localizer
+<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">GymMenagmentApp.App</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="home">
+                <span class="oi oi-home" aria-hidden="true"></span> @localizer["home"]
+            </NavLink>
+        </li>
+        @*<li class="nav-item px-3">
+            <NavLink class="nav-link" href="usercreate">
+            <span class="oi oi-plus" aria-hidden="true"></span> @localizer["createUser"]
+            </NavLink>
+            </li>*@
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="userOverview">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> @localizer["users"]
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="trainerOverview">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> @localizer["trainers"]
+            </NavLink>
+        </li>
+
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="employeeOverview">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> @localizer["employees"]
+            </NavLink>
+        </li>
+
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="newsletter">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> @localizer["newsletter"]
+            </NavLink>
+        </li>
+        @if (isAdmin)
+        {
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="loginDataOverview">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> @localizer["loginData"]
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="transactionsOverview">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> @localizer["transactions"]
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="reports">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> @localizer["reports"]
+                </NavLink>
+            </li>
+        }
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private bool isAdmin = false;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    protected async override Task OnInitializedAsync()
+    {
+        var security = await localstorage.GetItemAsync<string>("security");
+        if (security == "2")
+        {
+            isAdmin = true;
+        }
+        else
+        {
+            isAdmin = false;
+        }
+    }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

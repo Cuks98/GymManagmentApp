@@ -1,0 +1,59 @@
+﻿@page "/trainerDetail/{TrainerId}"
+@inject IStringLocalizer<Resource> localizer
+@*to do dodat Details for u localizer*@
+<h1 class="page-title">@localizer["detailsFor"]: @Trainer.FirstName @Trainer.LastName</h1>
+
+<div class="col-12 row">
+    <div class="col-12 row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["id"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Trainer.Id</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["firstName"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Trainer.FirstName</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["lastName"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Trainer.LastName</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["DoB"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Trainer.DoB.ToShortDateString()</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["gender"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Trainer.Gender</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["height"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Trainer.Height</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["weight"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Trainer.Weight</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["speciality"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@initialSpeciality</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

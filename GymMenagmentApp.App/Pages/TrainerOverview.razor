@@ -1,0 +1,38 @@
+﻿@page "/trainerOverview"
+@inject IStringLocalizer<Resource> localizer
+<h1 class="page-title">@localizer["allTrainers"]</h1>
+@if (Trainers == null)
+{
+    <p><em>@localizer["loading"]</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>@localizer["id"]</th>
+                <th>@localizer["firstName"]</th>
+                <th>@localizer["lastName"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trainer in Trainers)
+            {
+                <tr>
+                    <td></td>
+                    <td>@trainer.Id</td>
+                    <td>@trainer.FirstName</td>
+                    <td>@trainer.LastName</td>
+                    <td>
+                        <a href="@($"trainerDetail/{trainer.Id}")" class="btn btn-primary table-btn">@localizer["details"]</a>
+                        <a href="@($"traineredit/{trainer.Id}")" class="btn btn-primary table-btn">@localizer["edit"]</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/trainercreate" class="createBtn">+</a>
+}
+

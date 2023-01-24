@@ -1,0 +1,129 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body{
+    --blue-color:blue;
+}
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--blue-color);
+    border-color: #1861ac;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+.login-wrapper{
+    width: 100%;
+    margin: 0 auto;
+    background-color: blue;
+}
+
+.loginDiv{
+    margin-top:100px;
+    height: 50vh;
+    width:100%;
+    max-width:400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.culture-wrapper{
+    display: flex;
+    justify-content:flex-end;
+    align-content:center;
+}
+.loginHeader{
+    padding: 20px 50px;
+    display:flex;
+    justify-content: flex-start;
+}
+.loginBody {
+    padding: 0px 50px;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+}
+.loginLabel{
+    margin-top:20px;
+    display: block;
+    text-align: left;
+}
+.loginFooter{
+    padding:20px;
+}
+.filter-sort-wrapper{
+    display:flex;
+    flex-direction: column;
+}
+.filter-sort-group{
+    display:flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.filter-label{
+    margin: 0px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.marginBot30{
+    margin-bottom: 30px;
+}
+.bold{
+    font-weight: bold;
+}
+.createBtn{
+    font-size: 24px;
+    position: fixed;
+    display: block;
+    bottom: 50px;
+    right: 50px;
+    padding: 30px 40px;
+    border-radius: 50%;
+    background-color: rgba(144, 238, 144, 0.5);
+    color: white;
+    text-decoration: none;
+}
+.createBtn:hover {
+    cursor: pointer;
+    color:white;
+    text-decoration: none;
+    background-color: rgba(144, 238, 144, 0.8);
+}

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.App\bin\Release\net5.0\browser-wasm\publish\</_PublishTargetUrl>
+    <History>True|2022-08-19T17:48:28.5573283Z;</History>
+  </PropertyGroup>
+</Project>

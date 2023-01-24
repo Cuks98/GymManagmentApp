@@ -1,0 +1,43 @@
+﻿@inject IStringLocalizer<Resource> localizer
+@page "/useredit/{UserId}"
+
+@if (!Saved)
+{
+    <section>
+        <h1 class="page-title marginBot30" style="margin-bottom:30px">@localizer["extendMembershipFor"]: @User.FirstName @User.LastName</h1>
+        <EditForm Model="@User" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+            <div class="form-group row">
+                <label for="lastName" class="col-sm-3 bold" style="font-weight:bold">@localizer["id"]</label>
+                <label for="lastName" class="col-sm-3">@User.Id</label>
+                @*<InputText id="lastName" name="lastName" class="form-control col-sm-8" @bind-Value="@User.LastName" @oninput="@((e)=>{ User.LastName = (string)e.Value;})" placeholder="@localizer["lastName"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-3 bold" style="font-weight:bold">@localizer["firstName"]</label>
+                <label for="firstName" class="col-sm-3">@User.FirstName</label>
+                @*<InputText id="firstName" name="firstName" class="form-control col-sm-8" @bind-Value="@User.FirstName" @oninput="@((e)=>{ User.FirstName = (string)e.Value;})" placeholder="@localizer["firstName"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-3 bold" style="font-weight:bold">@localizer["LastName"]</label>
+                <label for="firstName" class="col-sm-3">@User.LastName</label>
+                @*<InputText id="email" name="email" class="form-control col-sm-8" @bind-Value="@User.Email" @oninput="@((e)=>{ User.Email = (string)e.Value;})" placeholder="@localizer["email"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="selector" class="col-sm-4 bold" style="font-weight:bold">@localizer["numOfMonthsSelectorLabel"]:</label>
+                <InputSelect id="selector" class="col-sm-3" @bind-Value="@SelectedNumberOfMonths">
+                    <option selected value="0">@localizer["selectNumMonth"]</option>
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                </InputSelect>
+            </div>
+            <button typle="submit" class="btn btn-primary">@localizer["extendMembershipBtn"]</button>
+            <a class="btn btn-danger table-btn" @onclick="@DeleteUser">@localizer["delete"]</a>
+            <a class="btn btn-outline-primary table-btn" @onclick="@NavigateToOverview">@localizer["back"]</a>
+        </EditForm>
+    </section>
+}
+else
+{
+    <div class="alert @StatusClass">@Msg</div>
+}

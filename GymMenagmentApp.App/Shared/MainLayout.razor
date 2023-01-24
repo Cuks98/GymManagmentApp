@@ -1,0 +1,34 @@
+﻿@inherits LayoutComponentBase
+@inject ILocalStorageService localstorage
+@using GymMenagmentApp.App.Pages
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <div class="main">
+        <div class="top-row px-4">
+            <div style="display:flex; width:100%; justify-content:space-between">
+                <div>
+                    <p style="font-weight:bold; margin:0px">@NameInfo</p>
+                </div>
+            </div>
+            <div style="display:flex">
+                <CultureSelector></CultureSelector>
+            </div>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>
+
+@code{
+    public string NameInfo = "";
+    protected async override Task OnInitializedAsync()
+    {
+        //var security = await localstorage.GetItemAsync<string>("security");
+        NameInfo = await localstorage.GetItemAsync<string>("name");
+    }
+}

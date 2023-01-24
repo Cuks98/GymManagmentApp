@@ -1,0 +1,38 @@
+﻿@page "/employeeOverview"
+@inject IStringLocalizer<Resource> localizer
+<h1 class="page-title">All users</h1>
+@if (Employees == null)
+{
+    <p><em>@localizer["loading"]</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>@localizer["id"]</th>
+                <th>@localizer["firstName"]</th>
+                <th>@localizer["lastName"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Employees)
+            {
+                <tr>
+                    <td></td>
+                    <td>@employee.Id</td>
+                    <td>@employee.FirstName</td>
+                    <td>@employee.LastName</td>
+                    <td>
+                        <a href="@($"employeeDetail/{employee.Id}")" class="btn btn-primary table-btn">@localizer["details"]</a>
+                        <a href="@($"employeeedit/{employee.Id}")" class="btn btn-primary table-btn">@localizer["edit"]</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/employeecreate" class="createBtn">+</a>
+}
+

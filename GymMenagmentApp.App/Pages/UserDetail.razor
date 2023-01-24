@@ -1,0 +1,76 @@
+﻿@page "/userDetail/{userId}"
+@inject IStringLocalizer<Resource> localizer
+<h1 class="page-title">@localizer["detailsFor"]: @User.FirstName @User.LastName</h1>
+
+<div class="col-12 row">
+    <div class="col-12 row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["id"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.Id</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["firstName"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.FirstName</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["lastName"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.LastName</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["email"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.Email</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["DoB"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.DoB.ToShortDateString()</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["firstRegistration"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.FirstRegistered.ToShortDateString()</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["registeredTo"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.RegisteredTo.ToShortDateString()</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["gender"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.Gender</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["height"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.Height</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["weight"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.Weight</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">@localizer["recomendedProgram"]:</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@User.RecomendedProgram</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.App\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.App\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor" Path="C:\Users\filip.curin\.nuget\packages\syncfusion.blazor\20.2.0.44\build\..\staticwebassets\" />
+</StaticWebAssets>

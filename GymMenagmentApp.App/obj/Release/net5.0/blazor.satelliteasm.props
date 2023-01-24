@@ -1,0 +1,7 @@
+﻿<SatelliteAssembly>
+  <Assembly Name="obj\Release\net5.0\de\GymMenagmentApp.App.resources.dll" Culture="de" DestinationSubDirectory="de\" />
+  <Assembly Name="obj\Release\net5.0\en\GymMenagmentApp.App.resources.dll" Culture="en" DestinationSubDirectory="en\" />
+  <Assembly Name="obj\Release\net5.0\hr\GymMenagmentApp.App.resources.dll" Culture="hr" DestinationSubDirectory="hr\" />
+  <Assembly Name="obj\Release\net5.0\it\GymMenagmentApp.App.resources.dll" Culture="it" DestinationSubDirectory="it\" />
+  <Assembly Name="obj\Release\net5.0\sl\GymMenagmentApp.App.resources.dll" Culture="sl" DestinationSubDirectory="sl\" />
+</SatelliteAssembly>

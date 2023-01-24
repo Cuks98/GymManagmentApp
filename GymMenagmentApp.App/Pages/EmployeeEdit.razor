@@ -1,0 +1,55 @@
+﻿@inject IStringLocalizer<Resource> localizer
+@page "/employeeedit/{EmployeeID}"
+
+@if (!Saved)
+{
+    <section>
+        <h1 class="page-title marginBot30" style="margin-bottom:30px">@localizer["edit"]: @Employee.FirstName @Employee.LastName</h1>
+        <EditForm Model="@Employee" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+            <div class="form-group row">
+                <label for="id" class="col-sm-4 bold" style="font-weight:bold">@localizer["id"]</label>
+                <label class="col-sm-3">@Employee.Id</label>
+                
+                @*<InputText id="lastName" name="lastName" class="form-control col-sm-8" @bind-Value="@User.LastName" @oninput="@((e)=>{ User.LastName = (string)e.Value;})" placeholder="@localizer["lastName"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-4 bold" style="font-weight:bold">@localizer["firstName"]</label>
+                @*<label for="firstName" class="col-sm-3">@Trainer.FirstName</label>*@
+                <InputText id="firstName" name="firstName" class="form-control col-sm-3" @bind-Value="@Employee.FirstName"></InputText>
+                @*<InputText id="firstName" name="firstName" class="form-control col-sm-8" @bind-Value="@User.FirstName" @oninput="@((e)=>{ User.FirstName = (string)e.Value;})" placeholder="@localizer["firstName"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="lastName" class="col-sm-4 bold" style="font-weight:bold">@localizer["lastName"]</label>
+                @*<label for="firstName" class="col-sm-3">@Trainer.LastName</label>*@
+                <InputText id="lastName" name="lastName" class="form-control col-sm-3" @bind-Value="@Employee.LastName"></InputText>
+                @*<InputText id="email" name="email" class="form-control col-sm-8" @bind-Value="@User.Email" @oninput="@((e)=>{ User.Email = (string)e.Value;})" placeholder="@localizer["email"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 bold" style="font-weight:bold">@localizer["email"]</label>
+                @*<label for="firstName" class="col-sm-3">@Trainer.LastName</label>*@
+                <InputText id="lastemailName" name="email" class="form-control col-sm-3" @bind-Value="@Employee.Email"></InputText>
+                @*<InputText id="email" name="email" class="form-control col-sm-8" @bind-Value="@User.Email" @oninput="@((e)=>{ User.Email = (string)e.Value;})" placeholder="@localizer["email"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="phone" class="col-sm-4 bold" style="font-weight:bold">@localizer["phone"]</label>
+                @*<label for="firstName" class="col-sm-3">@Trainer.LastName</label>*@
+                <InputText id="phone" name="phone" class="form-control col-sm-3" @bind-Value="@Employee.Phone"></InputText>
+                @*<InputText id="email" name="email" class="form-control col-sm-8" @bind-Value="@User.Email" @oninput="@((e)=>{ User.Email = (string)e.Value;})" placeholder="@localizer["email"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="levelOfSecurity" class="col-sm-4 bold" style="font-weight:bold">@localizer["levelOfSecurity"]</label>
+                @*<label for="firstName" class="col-sm-3">@Trainer.LastName</label>*@
+                <InputNumber id="levelOfSecurity" name="levelOfSecurity" class="form-control col-sm-3" @bind-Value="@Employee.LevelOfSecurity"></InputNumber>
+                @*<InputText id="email" name="email" class="form-control col-sm-8" @bind-Value="@User.Email" @oninput="@((e)=>{ User.Email = (string)e.Value;})" placeholder="@localizer["email"]"></InputText>*@
+            </div>
+            <button typle="submit" class="btn btn-primary">@localizer["extendMembershipBtn"]</button>
+            <a class="btn btn-danger table-btn" @onclick="@DeleteUser">@localizer["delete"]</a>
+            <a class="btn btn-outline-primary table-btn" @onclick="@NavigateToOverview">@localizer["back"]</a>
+        </EditForm>
+    </section>
+}
+else
+{
+    <div class="alert @StatusClass">@Msg</div>
+}
+

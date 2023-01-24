@@ -1,0 +1,39 @@
+﻿@page "/loginDataOverview"
+@inject IStringLocalizer<Resource> localizer
+<h1 class="page-title">@localizer["loginData"]</h1>
+@if (LoginData == null)
+{
+    <p><em>@localizer["loading"]</em></p>
+}
+else
+{
+    <a class="btn btn-danger table-btn" @onclick="@Delete">@localizer["delete"]</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>@localizer["id"]</th>
+                <th>@localizer["dateTime"]</th>
+                <th>@localizer["EmployeeId"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trainer in LoginData)
+            {
+                <tr>
+                    <td></td>
+                    <td>@trainer.Id</td>
+                    <td>@trainer.DateTime.ToString()</td>
+                    <td>@trainer.EmployeeId</td>
+                    <td>
+                        @*<a href="@($"trainerDetail/{trainer.Id}")" class="btn btn-primary table-btn">@localizer["details"]</a>*@
+                        <a href="@($"logindataedit/{trainer.Id}")" class="btn btn-primary table-btn">@localizer["edit"]</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @*<a href="/trainercreate" class="createBtn">+</a>*@
+}
+

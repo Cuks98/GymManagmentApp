@@ -1,0 +1,12 @@
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\bin\Release\net5.0\GymMenagmentApp.Shared.deps.json
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\bin\Release\net5.0\GymMenagmentApp.Shared.dll
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\bin\Release\net5.0\GymMenagmentApp.Shared.pdb
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\GymMenagmentApp.Shared.csproj.AssemblyReference.cache
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\GymMenagmentApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\GymMenagmentApp.Shared.AssemblyInfoInputs.cache
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\GymMenagmentApp.Shared.AssemblyInfo.cs
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\GymMenagmentApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\GymMenagmentApp.Shared.dll
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\refint\GymMenagmentApp.Shared.dll
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\GymMenagmentApp.Shared.pdb
+C:\Users\filip.curin\source\repos\GymMenagmentApp.App\GymMenagmentApp.Shared\obj\Release\net5.0\ref\GymMenagmentApp.Shared.dll

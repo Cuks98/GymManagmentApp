@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="allTrainers" xml:space="preserve">
+    <value>Vsi trenerji</value>
+  </data>
+  <data name="allUsers" xml:space="preserve">
+    <value>Vsi uporabniki</value>
+  </data>
+  <data name="amount" xml:space="preserve">
+    <value>Znesek</value>
+  </data>
+  <data name="back" xml:space="preserve">
+    <value>Nazaj</value>
+  </data>
+  <data name="bodyBuilding" xml:space="preserve">
+    <value>Body building</value>
+  </data>
+  <data name="btnCreateUser" xml:space="preserve">
+    <value>Ustvari uporabnika</value>
+  </data>
+  <data name="byDaysLeftAsc" xml:space="preserve">
+    <value>Razporedi po številu preostalih dni do registracije naraščajoče</value>
+  </data>
+  <data name="byDaysLeftDesc" xml:space="preserve">
+    <value>Razvrsti po padajočem številu preostalih dni do registracije</value>
+  </data>
+  <data name="byIdAsc" xml:space="preserve">
+    <value>Razvrsti po ID-ju naraščajoče</value>
+  </data>
+  <data name="byIdDesc" xml:space="preserve">
+    <value>Razvrsti po padajočem ID-ju</value>
+  </data>
+  <data name="choseSpeciality" xml:space="preserve">
+    <value>Izberite posebnost</value>
+  </data>
+  <data name="choseSportHistory" xml:space="preserve">
+    <value>Izberite kategorijo športa, s katerim se oseba ukvarja</value>
+  </data>
+  <data name="condition" xml:space="preserve">
+    <value>Vzdržljivost</value>
+  </data>
+  <data name="createTrainerBtn" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="dateTime" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="daysLeftOnRegistration" xml:space="preserve">
+    <value>Še nekaj dni do registracije</value>
+  </data>
+  <data name="de (DE)" xml:space="preserve">
+    <value>Nemški</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Izbriši</value>
+  </data>
+  <data name="deleteError" xml:space="preserve">
+    <value>Napaka!</value>
+  </data>
+  <data name="deleteSuccess" xml:space="preserve">
+    <value>Izbriši uspeh.</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Podrobnosti</value>
+  </data>
+  <data name="detailsFor" xml:space="preserve">
+    <value>Podrobnosti za</value>
+  </data>
+  <data name="DoB" xml:space="preserve">
+    <value>Datum rojstva</value>
+  </data>
+  <data name="downloadPdfBtn" xml:space="preserve">
+    <value>Prenesite PDF</value>
+  </data>
+  <data name="downloadRtfBtn" xml:space="preserve">
+    <value>Prenesite Rtf</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Uredi</value>
+  </data>
+  <data name="editLoginData" xml:space="preserve">
+    <value>Uredite podatke za prijavo</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>E-naslov</value>
+  </data>
+  <data name="employeeCeratedError" xml:space="preserve">
+    <value>Napaka!</value>
+  </data>
+  <data name="employeeCerateSucess" xml:space="preserve">
+    <value>Dodaten uspeh zaposlenih!</value>
+  </data>
+  <data name="EmployeeId" xml:space="preserve">
+    <value>ID zaposlenega</value>
+  </data>
+  <data name="employees" xml:space="preserve">
+    <value>Zaposleni</value>
+  </data>
+  <data name="en (US)" xml:space="preserve">
+    <value>Angleščina</value>
+  </data>
+  <data name="en-US" xml:space="preserve">
+    <value>Angleščina</value>
+  </data>
+  <data name="extendMembershipBtn" xml:space="preserve">
+    <value>Shrani</value>
+  </data>
+  <data name="extendMembershipFor" xml:space="preserve">
+    <value>Podaljšajte članstvo za</value>
+  </data>
+  <data name="female" xml:space="preserve">
+    <value>Ženska</value>
+  </data>
+  <data name="filterById" xml:space="preserve">
+    <value>Filtriraj po ID-ju</value>
+  </data>
+  <data name="filterByLastName" xml:space="preserve">
+    <value>Filtriraj po priimku</value>
+  </data>
+  <data name="filterByName" xml:space="preserve">
+    <value>Filtriraj po imenu</value>
+  </data>
+  <data name="firstName" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="firstRegistration" xml:space="preserve">
+    <value>Prva registracija</value>
+  </data>
+  <data name="gender" xml:space="preserve">
+    <value>Spol</value>
+  </data>
+  <data name="height" xml:space="preserve">
+    <value>Višina</value>
+  </data>
+  <data name="helloworld" xml:space="preserve">
+    <value>Zdravo</value>
+  </data>
+  <data name="helloworld1" xml:space="preserve">
+    <value>Pozdravljen, svet!</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Domov</value>
+  </data>
+  <data name="hr (HR)" xml:space="preserve">
+    <value>Hrvaško</value>
+  </data>
+  <data name="hr-HR" xml:space="preserve">
+    <value>Hrvaško</value>
+  </data>
+  <data name="id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="it (IT)" xml:space="preserve">
+    <value>Iitalijanščina</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Jezik</value>
+  </data>
+  <data name="lastName" xml:space="preserve">
+    <value>Priimek</value>
+  </data>
+  <data name="levelOfSecurity" xml:space="preserve">
+    <value>Stopnja varnosti</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>Nalaganje...</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Vpiši se</value>
+  </data>
+  <data name="loginData" xml:space="preserve">
+    <value>Zgodovina prijav</value>
+  </data>
+  <data name="male" xml:space="preserve">
+    <value>Moški</value>
+  </data>
+  <data name="multipleSpecialitys" xml:space="preserve">
+    <value>Več specialitet</value>
+  </data>
+  <data name="muscleBuilding" xml:space="preserve">
+    <value>Izgradnja mišic</value>
+  </data>
+  <data name="newsletter" xml:space="preserve">
+    <value>Pošlji glasilo</value>
+  </data>
+  <data name="nogometAtletikaKosarkaItd" xml:space="preserve">
+    <value>Nogomet/Atletika/Košarka/itd</value>
+  </data>
+  <data name="numOfMonthsSelectorLabel" xml:space="preserve">
+    <value>Število mesecev, za katere želi član podaljšati članstvo</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Geslo</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>Telefonska številka</value>
+  </data>
+  <data name="recomendedProgram" xml:space="preserve">
+    <value>Priporočen program</value>
+  </data>
+  <data name="recomendProgram" xml:space="preserve">
+    <value>Priporoči program</value>
+  </data>
+  <data name="registeredTo" xml:space="preserve">
+    <value>Registriran na</value>
+  </data>
+  <data name="reports" xml:space="preserve">
+    <value>Poročila</value>
+  </data>
+  <data name="selectNumMonth" xml:space="preserve">
+    <value>Izberite število mesecev</value>
+  </data>
+  <data name="send" xml:space="preserve">
+    <value>Pošlji</value>
+  </data>
+  <data name="sl (SI)" xml:space="preserve">
+    <value>Slovenščina</value>
+  </data>
+  <data name="sortBy" xml:space="preserve">
+    <value>Razvrsti po</value>
+  </data>
+  <data name="speciality" xml:space="preserve">
+    <value>Posebnost</value>
+  </data>
+  <data name="subject" xml:space="preserve">
+    <value>Predmet</value>
+  </data>
+  <data name="trainerCreateError" xml:space="preserve">
+    <value>Napaka!</value>
+  </data>
+  <data name="trainerCreateSuccess" xml:space="preserve">
+    <value>Trainer added successfully.</value>
+  </data>
+  <data name="trainerEditError" xml:space="preserve">
+    <value>Napaka!</value>
+  </data>
+  <data name="trainerEditSuccess" xml:space="preserve">
+    <value>Trener je bil uspešno dodan.</value>
+  </data>
+  <data name="trainers" xml:space="preserve">
+    <value>Superge</value>
+  </data>
+  <data name="transactions" xml:space="preserve">
+    <value>Transakcije</value>
+  </data>
+  <data name="trcanje" xml:space="preserve">
+    <value>Tek</value>
+  </data>
+  <data name="userCreateError" xml:space="preserve">
+    <value>Napaka!</value>
+  </data>
+  <data name="userCreateSuccess" xml:space="preserve">
+    <value>Uporabnik je bil uspešno dodan.</value>
+  </data>
+  <data name="userCreatorMenu" xml:space="preserve">
+    <value>Registrirajte novega člana</value>
+  </data>
+  <data name="users" xml:space="preserve">
+    <value>Uporabniki</value>
+  </data>
+  <data name="viseRazlicitihSportova" xml:space="preserve">
+    <value>Več športnih kategorij</value>
+  </data>
+  <data name="weight" xml:space="preserve">
+    <value>Teža</value>
+  </data>
+  <data name="weightLos" xml:space="preserve">
+    <value>Izguba teže</value>
+  </data>
+</root>

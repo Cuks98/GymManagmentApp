@@ -1,0 +1,62 @@
+﻿@page "/userOverview"
+@inject IStringLocalizer<Resource> localizer
+
+<h1 class="page-title">@localizer["allUsers"]</h1>
+@if (Users == null)
+{
+    <p><em>@localizer["loading"]</em></p>
+}
+else
+{
+    <div class="filter-sort-wrapper">
+        <div class="filter-sort-group">
+            <label class="filter-label" for="idFilter">@localizer["filterById"]:</label>
+            <input class="form-control" style="width:200px" name="idFilter" type="text" placeholder="@localizer["id"]" @onchange="@IdFilter">
+            <label class="filter-label" for="nameFilter">@localizer["filterByName"]:</label>
+            <input class="form-control" style="width:200px" name="nameFilter" type="text" placeholder="@localizer["firstName"]" @onchange="@NameFilter">
+        </div>
+        <div class="filter-sort-group">
+            <label class="filter-label" for="lastNameFilter">@localizer["filterByLastName"]:</label>
+            <input @onkeydown="FilterByLastName" class="form-control" style="width:200px" name="lastNameFilter" placeholder="@localizer["lastName"]" @onchange="@LastNameFilter">
+            <label class="filter-label" for="sortBy">@localizer["sortBy"]:</label>
+            <select class="form-control" style="width:200px" name="sortBy" @onchange="Sort">
+                <option selected disabled value="0">@localizer["SortBy"]</option>
+                <option value="1">@localizer["byIdAsc"]</option>
+                <option value="2">@localizer["byIdDesc"]</option>
+                <option value="3">@localizer["byDaysLeftAsc"]</option>
+                <option value="4">@localizer["byDaysLeftDesc"]</option>
+            </select>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>@localizer["id"]</th>
+                <th>@localizer["firstName"]</th>
+                <th>@localizer["lastName"]</th>
+                <th>@localizer["daysLeftOnRegistration"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in FilteredUserList)
+            {
+                <tr>
+                    <td></td>
+                    <td>@user.Id</td>
+                    <td>@user.FirstName</td>
+                    <td>@user.LastName</td>
+                    <td>@user.LeftOnRegistration</td>
+                    <td>
+                        <a href="@($"userDetail/{user.Id}")" class="btn btn-primary table-btn">@localizer["details"]</a>
+                        <a href="@($"useredit/{user.Id}")" class="btn btn-primary table-btn">@localizer["edit"]</a>
+                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/usercreate" class="createBtn">+</a>
+}
+

@@ -1,0 +1,41 @@
+﻿@page "/newsletter"
+@inject IStringLocalizer<Resource> localizer
+
+
+@if (!Saved)
+{
+    @if (Users == null)
+    {
+        <p><em>@localizer["loading"]</em></p>
+    }
+    else
+    {
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <label type="text" class="form-control-plaintext">@localizer["subject"]</label>
+                </div>
+                <div class="col-8">
+                    <input style="width:100%" id="subject" name="subject" class="form-control" @bind="@Subject" @oninput="@((e)=>{ Subject = (string)e.Value;})" placeholder="@localizer["subject"]"></input>
+                </div>
+                <div class="col-8">
+                    <label type="text" class="form-control-plaintext">@localizer["body"]</label>
+                </div>
+                <div class="col-8">
+                    <textarea style="width:100%" id="body" name="body" class="form-control" @bind="@Body" @oninput="@((e)=>{ Body = (string)e.Value;})" placeholder="@localizer["body"]"></textarea>
+                </div>
+            </div>
+            <div class="row" style="margin-top:10px">
+                <div class="col-8">
+                    <a class="btn btn-primary table-btn" @onclick="@Send">@localizer["send"]</a>
+                </div>
+            </div>
+        </div>
+    }
+
+}
+else
+{
+    <div class="alert @StatusClass">@Msg</div>
+}
+

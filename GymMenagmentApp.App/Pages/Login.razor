@@ -1,0 +1,31 @@
+﻿@layout LoginLayout
+@inject IStringLocalizer<Resource> localizer
+@page "/"
+@using System.Text
+@inject NavigationManager NavManager
+@inject IJSRuntime JS;
+@inject HttpClient Http;
+
+<div class="culture-wrapper"><CultureSelector></CultureSelector></div>
+
+<center>
+    <div class="loginDiv">
+        <div class="loginHeader">
+            <h4>@localizer["login"]</h4>
+        </div>
+        <div class="loginBody">
+            <div>
+                <label class="loginLabel" for="email">@localizer["email"]</label>
+                <input class="form-control" type="email" name="email" style="max-width:300px" @bind="@email" @oninput="@((e)=>{ email = (string)e.Value;})"/>
+            </div>
+            <div>
+                <label class="loginLabel" for="password">@localizer["password"]</label>
+                <input class="form-control" type="password" name="password" style="max-width:300px" @bind="@password" @oninput="@((e)=>{ password = (string)e.Value;})"/>
+            </div>
+        </div>
+        <div class="loginFooter">
+            <button class="btn btn-primary btn" @onclick="@LogIn">@localizer["login"]</button>
+        </div>
+    </div>
+</center>
+

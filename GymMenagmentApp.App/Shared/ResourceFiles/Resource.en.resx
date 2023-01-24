@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="allTrainers" xml:space="preserve">
+    <value>All trainers</value>
+  </data>
+  <data name="allUsers" xml:space="preserve">
+    <value>All users</value>
+  </data>
+  <data name="amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="bodyBuilding" xml:space="preserve">
+    <value>Body building</value>
+  </data>
+  <data name="btnCreateUser" xml:space="preserve">
+    <value>Create user</value>
+  </data>
+  <data name="byDaysLeftAsc" xml:space="preserve">
+    <value>Order by number of days left on registration ascending</value>
+  </data>
+  <data name="byDaysLeftDesc" xml:space="preserve">
+    <value>Order by nimber of days left on registration descending</value>
+  </data>
+  <data name="byIdAsc" xml:space="preserve">
+    <value>Order by id ascending</value>
+  </data>
+  <data name="byIdDesc" xml:space="preserve">
+    <value>Order by id descenfing</value>
+  </data>
+  <data name="choseSpeciality" xml:space="preserve">
+    <value>Chose speciality</value>
+  </data>
+  <data name="choseSportHistory" xml:space="preserve">
+    <value>Chose category of sport that person is doing</value>
+  </data>
+  <data name="condition" xml:space="preserve">
+    <value>Endurence</value>
+  </data>
+  <data name="createTrainerBtn" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="dateTime" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="daysLeftOnRegistration" xml:space="preserve">
+    <value>Days left on registration</value>
+  </data>
+  <data name="de (DE)" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="deleteError" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="deleteSuccess" xml:space="preserve">
+    <value>Delete success.</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="detailsFor" xml:space="preserve">
+    <value>Details for</value>
+  </data>
+  <data name="DoB" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="downloadPdfBtn" xml:space="preserve">
+    <value>Download Pdf</value>
+  </data>
+  <data name="downloadRtfBtn" xml:space="preserve">
+    <value>Download Rtf</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="editLoginData" xml:space="preserve">
+    <value>Edit login data</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="employeeCeratedError" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="employeeCerateSucess" xml:space="preserve">
+    <value>Employee added success!</value>
+  </data>
+  <data name="EmployeeId" xml:space="preserve">
+    <value>Employee id</value>
+  </data>
+  <data name="employees" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="en (US)" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="en-US" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="extendMembershipBtn" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="extendMembershipFor" xml:space="preserve">
+    <value>Extend membership for</value>
+  </data>
+  <data name="female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="filterById" xml:space="preserve">
+    <value>Filter by id</value>
+  </data>
+  <data name="filterByLastName" xml:space="preserve">
+    <value>Filter by lastname</value>
+  </data>
+  <data name="filterByName" xml:space="preserve">
+    <value>Filter by name</value>
+  </data>
+  <data name="firstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="firstRegistration" xml:space="preserve">
+    <value>First registration</value>
+  </data>
+  <data name="gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="helloworld" xml:space="preserve">
+    <value>Hello world!</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="hr (HR)" xml:space="preserve">
+    <value>Croatian</value>
+  </data>
+  <data name="hr-HR" xml:space="preserve">
+    <value>Croatian</value>
+  </data>
+  <data name="id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="it (IT)" xml:space="preserve">
+    <value>Italian</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="levelOfSecurity" xml:space="preserve">
+    <value>Level of security</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="loginData" xml:space="preserve">
+    <value>Login history</value>
+  </data>
+  <data name="male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="multipleSpecialitys" xml:space="preserve">
+    <value>Multiple specialitys</value>
+  </data>
+  <data name="muscleBuilding" xml:space="preserve">
+    <value>Muscle building</value>
+  </data>
+  <data name="newsletter" xml:space="preserve">
+    <value>Send newsletter</value>
+  </data>
+  <data name="nogometAtletikaKosarkaItd" xml:space="preserve">
+    <value>Football/Athletics/Basketball/etc</value>
+  </data>
+  <data name="numOfMonthsSelectorLabel" xml:space="preserve">
+    <value>Number of months for which member wants to extend his membership</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="recomendedProgram" xml:space="preserve">
+    <value>Recomended program</value>
+  </data>
+  <data name="recomendProgram" xml:space="preserve">
+    <value>Recomend program</value>
+  </data>
+  <data name="registeredTo" xml:space="preserve">
+    <value>Registered to</value>
+  </data>
+  <data name="reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="selectNumMonth" xml:space="preserve">
+    <value>Select number of months</value>
+  </data>
+  <data name="send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="sl (SI)" xml:space="preserve">
+    <value>Slovenian</value>
+  </data>
+  <data name="sortBy" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="speciality" xml:space="preserve">
+    <value>Speciality</value>
+  </data>
+  <data name="subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="trainerCreateError" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="trainerCreateSuccess" xml:space="preserve">
+    <value>Trainer added successfully.</value>
+  </data>
+  <data name="trainerEditError" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="trainerEditSuccess" xml:space="preserve">
+    <value>Changes saved successfully.</value>
+  </data>
+  <data name="trainers" xml:space="preserve">
+    <value>Trainers</value>
+  </data>
+  <data name="transactions" xml:space="preserve">
+    <value>Transactions</value>
+  </data>
+  <data name="trcanje" xml:space="preserve">
+    <value>Runing</value>
+  </data>
+  <data name="userCreateError" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="userCreateSuccess" xml:space="preserve">
+    <value>User added successfully.</value>
+  </data>
+  <data name="userCreatorMenu" xml:space="preserve">
+    <value>Register new member</value>
+  </data>
+  <data name="users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="viseRazlicitihSportova" xml:space="preserve">
+    <value>Multiple sport categorys</value>
+  </data>
+  <data name="weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="weightLos" xml:space="preserve">
+    <value>Weight loss</value>
+  </data>
+</root>

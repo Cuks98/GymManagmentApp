@@ -1,0 +1,32 @@
+﻿@inject IStringLocalizer<Resource> localizer
+@page "/logindataedit/{id}"
+
+@if (!Saved)
+{
+    <section>
+        <h1 class="page-title marginBot30" style="margin-bottom:30px">@localizer["editLoginData"]</h1>
+        <EditForm Model="@LoginData" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+            <div class="form-group row">
+                <label for="lastName" class="col-sm-3 bold" style="font-weight:bold">@localizer["id"]</label>
+                <label for="lastName" class="col-sm-3">@LoginData.Id</label>
+                @*<InputText id="lastName" name="lastName" class="form-control col-sm-8" @bind-Value="@User.LastName" @oninput="@((e)=>{ User.LastName = (string)e.Value;})" placeholder="@localizer["lastName"]"></InputText>*@
+            </div>
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-3 bold" style="font-weight:bold">@localizer["EmployeeId"]</label>
+                @*<label for="firstName" class="col-sm-3">@LoginData.EmployeeId</label>*@
+                <InputNumber id="firstName" name="firstName" class="form-control col-sm-8" @bind-Value="@LoginData.EmployeeId" @oninput="@((e)=>{ LoginData.EmployeeId = (int)e.Value;})" placeholder="@localizer["firstName"]"></InputNumber>
+            </div>
+            <div class="form-group row">
+                <label for="firstName" class="col-sm-3 bold" style="font-weight:bold">@localizer["DateTime"]</label>
+                <label for="firstName" class="col-sm-3">@LoginData.DateTime.ToString()</label>
+                @*<InputText id="email" name="email" class="form-control col-sm-8" @bind-Value="@User.Email" @oninput="@((e)=>{ User.Email = (string)e.Value;})" placeholder="@localizer["email"]"></InputText>*@
+            </div>
+            <button typle="submit" class="btn btn-primary">@localizer["edit"]</button>
+            <a class="btn btn-outline-primary table-btn" @onclick="@NavigateToOverview">@localizer["back"]</a>
+        </EditForm>
+    </section>
+}
+else
+{
+    <div class="alert @StatusClass">@Msg</div>
+}

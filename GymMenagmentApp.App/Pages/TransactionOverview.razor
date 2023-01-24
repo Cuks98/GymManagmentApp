@@ -1,0 +1,38 @@
+﻿@page "/transactionsOverview"
+@inject IStringLocalizer<Resource> localizer
+<h1 class="page-title">@localizer["transactions"]</h1>
+@if (Transactions == null)
+{
+    <p><em>@localizer["loading"]</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>@localizer["id"]</th>
+                <th>@localizer["dateTime"]</th>
+                <th>@localizer["amount"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trainer in Transactions)
+            {
+                <tr>
+                    <td></td>
+                    <td>@trainer.Id</td>
+                    <td>@trainer.Date.ToString()</td>
+                    <td>@trainer.Amount</td>
+                    <td>
+                        @*<a href="@($"trainerDetail/{trainer.Id}")" class="btn btn-primary table-btn">@localizer["details"]</a>*@
+                        <a href="@($"transactionedit/{trainer.Id}")" class="btn btn-primary table-btn">@localizer["edit"]</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @*<a href="/trainercreate" class="createBtn">+</a>*@
+}
+
